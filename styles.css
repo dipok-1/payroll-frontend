@@ -1,0 +1,310 @@
+/* Body styling */
+body {
+    background-color: #F4F6F9;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:#062c39eb;
+    color: #D1D1D1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+header .logo img {
+    height: 60px;
+    width: auto;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+header .logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Header Title Styling */
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 15px 8px 7px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+header h1:hover {
+    color: #32cd32;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Navigation Bar Styling */
+#nav {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-items: center;
+}
+
+#nav div a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease, font-size 0.3s ease;
+}
+
+#nav div a:hover {
+    color: #32cd32;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1.5rem;
+}
+
+/* Hamburger Menu Icon */
+#nav-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ffffff;
+    margin-left: auto;
+}
+
+/* Mobile Media Query */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        background-color: #008080;
+        padding: 10px 0;
+        width: 100%; /* Ensure nav takes full width on mobile */
+        position: absolute; /* Makes the navbar float above content */
+        top: 50px; /* Space it below the header */
+        left: 0;
+        z-index: 999; /* Ensure it's above content */
+    }
+
+    #nav.active {
+        display: flex;
+    }
+
+    #nav div a {
+        font-size: 1rem;
+        width: 100%;
+        text-align: left;
+        padding: 12px;
+    }
+
+    header .logo img {
+        height: 50px;
+    }
+
+    #nav-toggle {
+        display: block;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #008080;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Table Styling for Payroll */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #008080;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Hero Section Styling */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 80vh; /* Full-screen hero section */
+    background: linear-gradient(to bottom, #008080, #004d4d); /* Gradient Background */
+    color: #ffffff;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#cta-btn {
+    background-color: #32cd32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#cta-btn:hover {
+    background-color: #28a745;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+.simple-content{
+    height: 30rem;
+    text-align: center;
+}
+.simple-content h2{
+    font-size: 2rem;
+    color: #008080;
+    font-weight: bold;
+}
+.simple-content p{
+    font-size: 1.5rem;
+    color: #008080;
+}
+/* General Styling for Add Employee Section */
+#add-employee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px; /* Add padding for better spacing on smaller screens */
+    background-color: #004d4d;
+}
+
+#employee-form {
+    position: relative;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Full width by default */
+    max-width: 400px; /* Limit maximum width */
+    margin: 0 auto;
+    padding: 20px; /* Add padding for better layout on small devices */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some styling */
+    background-color: #f8f9fa; /* Optional: Light background for visibility */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+#add-employee h2 {
+    font-size: 2.5rem; /* Smaller font size for better responsiveness */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+#add-employee h2:hover{
+    color: #1f9f37;
+}
+#employee-form label {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    font-weight: bold;
+}
+
+#employee-form input {
+    padding: 10px;
+    font-size: 1rem; /* Slightly smaller for responsiveness */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded edges */
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+/* Button Styling (Optional) */
+#employee-form button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#employee-form button:hover {
+    background-color: #005959;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    #add-employee {
+        padding: 10px; /* Reduce padding for smaller screens */
+        flex-direction: column;
+    }
+
+    #employee-form {
+        width: 90%; /* Take up most of the screen width */
+        max-width: none; /* Remove maximum width */
+        padding: 15px; /* Adjust padding */
+    }
+
+    #add-employee h2 {
+        font-size: 2rem; /* Smaller heading size */
+    }
+
+    #employee-form label {
+        font-size: 1rem; /* Adjust label size */
+    }
+
+    #employee-form input {
+        font-size: 0.9rem; /* Adjust input font size */
+    }
+
+    #employee-form button {
+        font-size: 0.9rem; /* Smaller button size */
+        padding: 8px; /* Reduce padding */
+    }
+}
+
